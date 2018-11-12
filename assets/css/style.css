@@ -1,0 +1,28 @@
+.lots-stockcard {
+    padding: 5px;
+}
+.lots-stockcard-accept {
+    color: #3c763d;
+}
+.badge {
+    color: #fff;
+}
+.small {
+    font-size: 75%;
+}
+
+#tg-alert-invalid {
+    display: none;
+}
+.pointer {
+    cursor: pointer;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+}

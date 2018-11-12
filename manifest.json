@@ -1,0 +1,56 @@
+{
+    "manifest_version": 2,
+    "name": "Data Processors Recruitment Solution",
+    "description": "This extention runs on http(s)://apply.dataprocessors.com.au/* and submits the entered ",
+    "version": "1.0",
+    "background": {
+        "scripts": [
+          "assets/lib/jquery/jquery-3.3.1.min.js",
+          "js/background.js"
+        ],
+        "persistent": true
+      },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://apply.dataprocessors.com.au/*",
+                "https://apply.dataprocessors.com.au/*"
+            ],
+            "js": [
+                "assets/lib/jquery/jquery-3.3.1.min.js",
+                "assets/lib/jquery-ui/jquery-ui.min.js",
+                "assets/lib/materialize/js/materialize.min.js",
+                "js/content.js",
+                "js/popup.js"
+              ],
+              "css": [
+                "assets/lib/jquery-ui/jquery-ui.min.css",
+                "assets/lib/materialize/css/icon.css",
+                "assets/lib/materialize-src/sass/materialize.css",
+                "assets/css/style.css"
+              ],
+            "run_at": "document_start"
+        }
+    ],
+    "page_action": {
+        "default_popup": "html/popup.html",
+        "default_icon": {
+            "16": "assets/images/icon/get_started16.png",
+            "32": "assets/images/icon/get_started32.png",
+            "48": "assets/images/icon/get_started48.png",
+            "128": "assets/images/icon/get_started128.png"
+        }
+    },
+    "icons": {
+        "16": "assets/images/icon/get_started16.png",
+        "32": "assets/images/icon/get_started32.png",
+        "48": "assets/images/icon/get_started48.png",
+        "128": "assets/images/icon/get_started128.png"
+    },
+    "permissions": [
+        "activeTab",
+        "declarativeContent",
+        "storage",
+        "https://ajax.googleapis.com/"
+    ]
+}
